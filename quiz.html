@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+<link href="https://www.holbertonschool.com/level2/holberton.css" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
+    <title>Travel Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="works_on_smartphone">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script> 
+   <header>
+        <div class="social-buttons">
+	<div class="fb-share-button"
+	data-href="http://213.167.240.77/index.html"
+	data-layout="button" data-size="small"
+	data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore"
+	target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F213.167.240.77%2Findex.html&amp;src=sdkpreparse">Share</a></div>
+	<a href="https://twitter.com/share"
+	class="twitter-share-button"
+	data-show-count="false">Tweet</a><script async
+	src="//platform.twitter.com/widgets.js"
+	charset="utf-8"></script>
+	<a class="tumblr-share-button"
+	href="https://www.tumblr.com/share"></a>
+	<script id="tumblr-js" async
+	src="https://assets.tumblr.com/share-button.js"></script>
+      </div>
+      <ul>
+	<li class="logo">&#128049;</li>
+	<li><a href="http://213.167.240.77/index.html">Main</a></li>
+	<li><a class="active" href="http://213.167.240.77/quiz.html">Quiz</a></li>
+  <li><a href="http://213.167.240.77/itineraries.html">Itineraries</a>  </li>
+	<li><a href="http://213.167.240.77/tweets.html">Tweets</a></li>
+      </ul>
+      </header>
+      <main>
+      <article>
+    <h1>Which itineraries should you choose?</h1>
+    <p> Answer this question to get some suggestions about what itineraries work best for you (links provided once you submit your answers)</p>
+ 
+<form  id="form1" method="post">
+<p>What do you like to see/do most when travelling?</p>
+<label><input type="radio" name="activ" id="food" value="f" />Eat good food</label><br>
+<label><input type="radio" name="activ" id="nature" value="n" />Be out in nature</label><br>
+<label><input type="radio" name="activ" id="local" value="l" />Walk around local neighborhoods and participate in local events</label><br>
+<label><input type="radio" name="activ" id="shop" value="s" />Shop and ejoy nightlife</label><br>
+<label><input type="radio" name="activ" id="history" value="h" />Visit historical sights</label><br>
+
+<button type="submit" value="Submit">Submit</button>
+
+</form>
+
+<p id="answer"></p>
+
+</div>
+<script>
+ 
+    
+document.getElementById("form1").onsubmit=function() {
+        
+   itin = document.querySelector('input[name = "activ"]:checked').value;
+         
+
+        if(itin == "f" || itin == "l" || itin == "s") {
+document.getElementById("answer").innerHTML = "You got<a href=\"http://213.167.240.77/itineraries.html#nonbiri\"> Nonbiri.</a>";
+}
+
+   if(itin == "n") {
+document.getElementById("answer").innerHTML = "You got<a href=\"http://213.167.240.77/itineraries.html#shizen\"> Shizen.</a>";
+}
+
+   if(itin == "h") {
+document.getElementById("answer").innerHTML = "You got<a href=\"http://213.167.240.77/itineraries.html#dentou\"> Dentou.</a>";
+}   
+
+
+         
+         return false; // required to not refresh the page; just leave this here
+         }// end the submit function
+      
+
+</script>
+
+
+      </article>
+<aside><div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+this.page.url = 'http://213.167.240.77';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = '/index'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://http-213-167-240-77.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</aside>
+ </main>
+<footer>
+Made by <a href="https://twitter.com/carprins" target="_blank">Nhi Ngo</a> for <a href="https://www.holbertonschool.com" target="_blank">Holberton School</a> 
+</footer>
+ </body>
+</html>
